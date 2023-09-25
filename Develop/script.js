@@ -60,21 +60,7 @@ function updateTimes() {
 //refresh and retreive as needed
 
 
-function refresh() {
-  $('.time-block').each(function() {
-    var grayHour = parseInt(this.id);
-      if(grayHour === currentTime) {
-        $(this).removeClass('past future').addClass('present');
-      }
-      else if(grayHour < currentTime) {
-        $(this).removeClass('present future').addClass('past');
-      }
-      else if (grayHour > currentTime) {
-        $(this).removeClass('present past').addClass('future');
 
-    }
-  });
-}
 
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
