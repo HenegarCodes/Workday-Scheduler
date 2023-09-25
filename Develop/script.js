@@ -1,17 +1,28 @@
  //Wrap all code that interacts with the DOM in a call to jQuery to ensure that the code isn't run until the browser has finished rendering all the elementsin the html.
 //col-8
-var localeSettings = {};
-dayjs.locale(localeSettings);
+var localSettings = {};
+dayjs.locale(localSettings);
 
 
 $(function(){
 
   var currentTime = dayjs().format("H");
+
+  function colorChanger() {
+    $('.time-block').each(function() {
+      var changeHour = parseInt(this.id);
+    })
+  }
 })
 
 
 
-function enterTxt) {
+
+
+
+
+//when clicked, the save button sets the key and value to its correct time slot to local storage
+function enterTxt() {
 $(".saveBtn").on('click', function(){
   var key = $(this).parent().attr('id');
   var value = $(this).siblings('.description').val();
