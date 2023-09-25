@@ -1,16 +1,19 @@
  //Wrap all code that interacts with the DOM in a call to jQuery to ensure that the code isn't run until the browser has finished rendering all the elementsin the html.
 //col-8
-var localSettings = {};
-dayjs.locale(localSettings);
+//var localSettings = {};
+//dayjs.locale(localSettings);
 
-$(function(){
-  var currentTime = dayjs().format("H");
+var currentDateTime = document.getElementById('currentDay');
 
-  function colorChanger() {
-    $('.time-block').each(function() {
-      var changeHour = parseInt(this.id);
-    })
-  }
+function correctDayTime() {
+  var now = dayjs();
+  var formatTime = now.format('MMM DD, YYYY [at] hh:mm:ss A');
+  currentDateTime.textContent = formatTime;
+}
+correctDayTime();
+setInterval(correctDayTime, 1000);
+
+
 
   //when clicked, the save button sets the key and value to its correct time slot to local storage
   $(".saveBtn").on('click', function(){
@@ -31,21 +34,26 @@ $(function(){
   loadSave();
 
   //refresh and retrieve as needed
-  function refresh() {
-    $('.time-block').each(function() {
-      var grayHour = parseInt(this.id);
-      if (grayHour === currentTime) {
-        $(this).removeClass('past future').addClass('present');
-      } else if (grayHour < currentTime) {
-        $(this).removeClass('present future').addClass('past');
-      } else if (grayHour > currentTime) {
-        $(this).removeClass('present past').addClass('future');
-      }
-    });
-  }
+var timeBlocked = document.querySelectorAll('.time-block');
 
-  refresh();
-});
+function updateTimes() {
+  var currentTime = dayjs().hour();
+  timeBlocked.forEach((timeBlock) => {
+    var hourBlock = parseInt(timeBlock.dataset.hour);
+
+    timeBlocked.classList.remove('past', 'present', 'future');
+
+    if (hourBlock < currentTime) {
+      timeBlock.classList.add('past');
+    }else if( hourBlock === currentTime) {
+      timeBlock.classList.add('present');
+    }else {
+      timeBlock.classList.add('future');
+    }
+
+  });
+
+}
 
 
 
