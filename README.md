@@ -1,4 +1,4 @@
-# 05 WorkDay Scheduler
+# WorkDay Scheduler
 
 
 ## Description
@@ -22,7 +22,7 @@ If needing to view the code in an IDE download or open this code with VsCode (my
 
 Using this you can input your items. It can be anything that can be typed in your selected hour of the day. If needing to save it, click the save button on the right side correlating with the desired hour. This will save it to local storage using JavaScript and Jquery in the background. Then if the page refreshs for any reason the item that was put in there will still be there for the workday.
 
-
+![WorkDay Schedule](https://github.com/HenegarCodes/Workday-Scheduler/assets/78831747/055f7138-fd33-47f2-86cf-bbca9d1ec870)
 ## Credits
 
 Only utilized documentation on this project. All code is my own and no third parties or other resources were utilized that need credit.
