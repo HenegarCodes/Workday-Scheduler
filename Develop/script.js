@@ -1,11 +1,8 @@
- //Wrap all code that interacts with the DOM in a call to jQuery to ensure that the code isn't run until the browser has finished rendering all the elementsin the html.
-//col-8
-//var localSettings = {};
-//dayjs.locale(localSettings);
+//the JS will not run until HTML page is fully loaded
 $(document).ready(function() {
-
+//creates variable that will ge tthe #currentDay
 var currentDateTime = document.getElementById('currentDay');
-
+//sets the date and time and sets the interval to update
 function correctDayTime() {
   var now = dayjs();
   var formatTime = now.format('MMM DD, YYYY [at] hh:mm:ss A');
@@ -37,22 +34,24 @@ setInterval(correctDayTime, 1000);
   //refresh and retrieve as needed
 var timeBlocks = $('.time-block');
 
+
+//updating times. this will take the current time with the hour
 function updateTimes() {
   var currentTime = dayjs().hour();
-
+//creates function that will take the integer/value out of the ID. array is the second item in the array
   timeBlocks.each(function() {
     var hourBlock = parseInt($(this).attr('id').split('-')[1]);
 
-
+//this will remove the class from the respective hour
     $(this).removeClass('past present future');
-
+//evaluates if the hour is is less than the currentTime which makes it past 
     if (hourBlock < currentTime) {
      
       $(this).addClass('past');
-    }
+    }//evaluates  the hour is actually the current hour
     else if( hourBlock === currentTime) {
       $(this).addClass('present');   
-     }
+     }//if none of these are true then it will be the future
       else {
         $(this).addClass('future');    
       }
