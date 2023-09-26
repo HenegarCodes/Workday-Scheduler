@@ -2,6 +2,7 @@
 //col-8
 //var localSettings = {};
 //dayjs.locale(localSettings);
+$(document).ready(function() {
 
 var currentDateTime = document.getElementById('currentDay');
 
@@ -63,5 +64,5 @@ function updateTimes() {
 
 
 
-
+});
 

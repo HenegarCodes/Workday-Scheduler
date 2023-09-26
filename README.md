@@ -1,99 +1,34 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# 05 WorkDay Scheduler
 
-## Your Task
 
-Create a simple calendar application that allows a user to save events for each hour of a typical working day (9am&ndash;5pm) by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+## Description
 
-You'll need to use the [Day.js](https://day.js.org/en/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Day.js in the browser.
+This project had some starter code. The main goal of this project challenge was to utilize jquery and javascript and create a basic functioning scheduler for the day and make it save with localstorage upon refresh. I learned the "shorthand" ways to use Jquery instead of JS. It helped solve the problem of not being able to see what hour of the day it was with the date in the header but also solved it going along and color coating as the day went on upon refresh which had some seriously interesting syntax. I learned jQuery better although it was my first time working with it and expect to use ti more, I would like to become proficient with it. I also figured out how to ad and remove classes and attributes better. WHile the syntax is shorter I was able to correlate it with the vanilla JS i have worked with which isn't a ton as of yet. All together it has taught me a solid foundation I would like to build upon and solidify even more in the coming weeks.
 
-## User Story
+## Table of Contents (Optional)
 
-```md
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
+If your README is long, add a table of contents to make it easy for users to find what they need.
 
-## Acceptance Criteria
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
 
-```md
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours of 9am&ndash;5pm
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
+## Installation
 
-The following animation demonstrates the application functionality:
+If needing to view the code in an IDE download or open this code with VsCode (my preference). Then open it and run it using control B on a Mac. You can also find the link to the deployed project below in this README.
 
-<!-- @TODO: create ticket to review/update image) -->
-![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-homework-demo.gif)
+## Usage
 
-## Grading Requirements
+Using this you can input your items. It can be anything that can be typed in your selected hour of the day. If needing to save it, click the save button on the right side correlating with the desired hour. This will save it to local storage using JavaScript and Jquery in the background. Then if the page refreshs for any reason the item that was put in there will still be there for the workday.
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
 
-This Challenge is graded based on the following criteria:
+## Credits
 
-### Technical Acceptance Criteria: 40%
+Only utilized documentation on this project. All code is my own and no third parties or other resources were utilized that need credit.
 
-* Satisfies all of the above acceptance criteria plus the following:
+## License
 
-  * Uses a date utility library to work with date and time
+Please see licensing 
 
-### Deployment: 32%
-
-* Application deployed at live URL
-
-* Application loads with no errors
-
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the Challenge instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+---
